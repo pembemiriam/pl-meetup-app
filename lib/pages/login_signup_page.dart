@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:pl_meetup_app/services/authentication.dart';
 
@@ -14,9 +15,11 @@ class LoginSignupPage extends StatefulWidget {
 class _LoginSignupPageState extends State<LoginSignupPage> {
   final _formKey = new GlobalKey<FormState>();
 
+
   String _email;
   String _password;
   String _errorMessage;
+  String _name;
 
     bool _isLoginForm;
   bool _isLoading;
@@ -44,10 +47,12 @@ class _LoginSignupPageState extends State<LoginSignupPage> {
           userId = await widget.auth.signIn(_email, _password);
           print('Signed in: $userId');
         } else {
-          userId = await widget.auth.signUp(_email, _password);
+          userId = await widget.auth.signUp(_email, _password, _name);
           //widget.auth.sendEmailVerification();
           //_showVerifyEmailSentDialog();
           print('Signed up user: $userId');
+
+
         }
         setState(() {
           _isLoading = false;
@@ -144,6 +149,7 @@ class _LoginSignupPageState extends State<LoginSignupPage> {
             children: <Widget>[
               showLogo(),
               showEmailInput(),
+              showNameInput(),
               showPasswordInput(),
               showPrimaryButton(),
               showSecondaryButton(),
@@ -184,6 +190,7 @@ class _LoginSignupPageState extends State<LoginSignupPage> {
     );
   }
 
+
   Widget showEmailInput() {
     return Padding(
       padding: const EdgeInsets.fromLTRB(0.0, 100.0, 0.0, 0.0),
@@ -199,6 +206,25 @@ class _LoginSignupPageState extends State<LoginSignupPage> {
             )),
         validator: (value) => value.isEmpty ? 'Email can\'t be empty' : null,
         onSaved: (value) => _email = value.trim(),
+      ),
+    );
+  }
+
+  Widget showNameInput() {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(0.0, 100.0, 0.0, 0.0),
+      child: new TextFormField(
+        maxLines: 1,
+        keyboardType: TextInputType.text,
+        autofocus: false,
+        decoration: new InputDecoration(
+            hintText: 'Name',
+            icon: new Icon(
+              Icons.person,
+              color: Colors.grey,
+            )),
+        validator: (value) => value.isEmpty ? 'Name can\'t be empty' : null,
+        onSaved: (value) => _name = value.trim(),
       ),
     );
   }
