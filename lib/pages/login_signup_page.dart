@@ -96,7 +96,7 @@ class _LoginSignupPageState extends State<LoginSignupPage> {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
-          title: new Text('Flutter login demo'),
+          title: new Text('PL Meetup'),
         ),
         body: Stack(
           children: <Widget>[

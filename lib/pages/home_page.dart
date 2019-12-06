@@ -203,7 +203,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget showTodoList() {
     if (_todoList.length > 0) {
-      return ListView.builder(
+      return ListView.separated(
           shrinkWrap: true,
           itemCount: _todoList.length,
           itemBuilder: (BuildContext context, int index) {
@@ -235,7 +235,9 @@ class _HomePageState extends State<HomePage> {
                     }),
               ),
             );
-          });
+          }, separatorBuilder: (context,index) {
+            return Divider(color: Colors.grey,);
+      },);
     } else {
       return Center(
           child: Text(
@@ -250,7 +252,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
-          title: new Text('Flutter login demo'),
+          title: new Text('PL Meetup'),
           actions: <Widget>[
             new FlatButton(
                 child: new Text('Logout',

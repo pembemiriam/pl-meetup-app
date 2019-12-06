@@ -34,7 +34,7 @@ class Auth implements BaseAuth {
     await user.updateProfile(userUpdateInfo); //update the info
     await user.reload();
 
-    return user.u;
+    return user.uid;
   }
 
   Future<FirebaseUser> getCurrentUser() async {
