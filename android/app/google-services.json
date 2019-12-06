@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "568682978748",
+    "firebase_url": "https://momo-send.firebaseio.com",
+    "project_id": "momo-send",
+    "storage_bucket": "momo-send.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568682978748:android:0658f0e3ad4a5795109fb9",
+        "android_client_info": {
+          "package_name": "com.devfestbuea.pl_meetup_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568682978748-t1goj2h9o6ov8mhqcqf2uo2eo5af63hs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChC1s_NX_71HuxOZXSgWaZy_QjdYpyJ1U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "568682978748-t1goj2h9o6ov8mhqcqf2uo2eo5af63hs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568682978748:android:a9056c3b987ae166109fb9",
+        "android_client_info": {
+          "package_name": "com.ngenge.apps.momosend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568682978748-t0ck0662j5ri18da4jguubd1dvl75mv4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ngenge.apps.momosend",
+            "certificate_hash": "44d22b13330f0d84f00108d65d2a92182052b8fd"
+          }
+        },
+        {
+          "client_id": "568682978748-t1goj2h9o6ov8mhqcqf2uo2eo5af63hs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChC1s_NX_71HuxOZXSgWaZy_QjdYpyJ1U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "568682978748-t1goj2h9o6ov8mhqcqf2uo2eo5af63hs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
